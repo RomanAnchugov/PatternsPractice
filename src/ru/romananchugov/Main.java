@@ -1,131 +1,92 @@
 package ru.romananchugov;
 
+import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
+
 public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
+        WeatherData weatherData = main.new WeatherData();
+        CurrentConditionsDisplay currentConditionsDisplay = main.new CurrentConditionsDisplay(weatherData);
 
-        Duck mallard = main.new MallardDuck();
-        mallard.performFly();
-        mallard.performQuack();
-
-        Duck model = main.new ModelDuck();
-        model.performQuack();
-        model.performFly();
-        model.setFlyBehaviour(main.new FlyRockerPowered());
-        model.performFly();
+        weatherData.setMeasurements(80, 65, 30.4f);
+        weatherData.setMeasurements(82, 70, 29.2f);
+        weatherData.setMeasurements(78, 90, 29.2f);
     }
 
-    public class Manock{
-        QuackBehaviour quackBehaviour = new Quack();
-        public void preformQuack(){
-            quackBehaviour.quack();
+    public interface Subject{
+        public void registerObserver(Observer o);
+        public void removeObserver(Observer o);
+        public void notifyObservers();
+    }
+
+    public interface  DisplayElement{
+        public void display();
+    }
+
+    public class WeatherData extends Observable{
+
+        private float temperature;
+        private float humidity;
+        private float pressure;
+
+
+        public void measurementsChanged(){
+            setChanged();
+            notifyObservers();
+        }
+
+        public void setMeasurements(float temperature, float humidity, float pressure){
+            this.temperature = temperature;
+            this.humidity = humidity;
+            this.pressure = pressure;
+            measurementsChanged();
+        }
+
+        public float getTemperature() {
+            return temperature;
+        }
+
+        public float getHumidity() {
+            return humidity;
+        }
+
+        public float getPressure() {
+            return pressure;
         }
     }
 
-    public class MallardDuck extends Duck{
+    public class CurrentConditionsDisplay implements java.util.Observer, DisplayElement{
 
-        public MallardDuck(){
-            quackBehaviour = new Quack();
-            flyBehaviour = new FlyWithWings();
+        private float temperature;
+        private float humidity;
+        private Observable observable;
+
+
+        public CurrentConditionsDisplay(Observable observable){
+            this.observable = observable;
+            observable.addObserver(this);
         }
+
 
         @Override
         public void display() {
-            System.out.println("I'm a real mallard duck");
-        }
-
-    }
-
-    public class ModelDuck extends Duck{
-
-        public ModelDuck(){
-            flyBehaviour = new FlyNoWay();
-            quackBehaviour = new Quack();
+            System.out.println("Current conditions: " + temperature + " F degrees and" + humidity + "% humidity");
         }
 
         @Override
-        public void display() {
-            System.out.println("I'm a model duck");
+        public void update(Observable o, Object arg) {
+            if(o instanceof WeatherData){
+                WeatherData weatherData = (WeatherData) o;
+                this.temperature = weatherData.getTemperature();
+                this.humidity = weatherData.getHumidity();
+                display();
+            }
         }
     }
 
-    public abstract class Duck{
-        FlyBehaviour flyBehaviour;
-        QuackBehaviour quackBehaviour;
 
-        public abstract void display();
-
-        public void performFly(){
-            flyBehaviour.fly();
-        }
-        public void performQuack(){
-            quackBehaviour.quack();
-        }
-
-        public void swim(){
-            System.out.println("All ducks float, even decoys!");
-        }
-
-        public void setFlyBehaviour(FlyBehaviour fb){
-            flyBehaviour = fb;
-        }
-        public void setQuackBehaviour(QuackBehaviour qb){
-            quackBehaviour = qb;
-        }
-    }
-    //flying
-    public interface FlyBehaviour{
-        public void fly();
-    }
-    public class FlyWithWings implements FlyBehaviour{
-        @Override
-        public void fly() {
-            System.out.println("I'm flying!");
-        }
-    }
-    public class FlyNoWay implements FlyBehaviour{
-
-        @Override
-        public void fly() {
-            System.out.println("I can't fly");
-        }
-
-    }
-    public class FlyRockerPowered implements FlyBehaviour{
-
-        @Override
-        public void fly() {
-            System.out.println("I'm flying with a rocket");
-        }
-    }
-    //quacking
-    public interface QuackBehaviour{
-        public void quack();
-    }
-    public class Quack implements QuackBehaviour{
-
-        @Override
-        public void quack() {
-            System.out.println("Quack");
-        }
-
-    }
-    public class MuteQuack implements QuackBehaviour{
-
-        @Override
-        public void quack() {
-            System.out.println("Silence!");
-        }
-
-    }
-    public class Squek implements QuackBehaviour{
-
-        @Override
-        public void quack() {
-            System.out.println("Squek!");
-        }
-
-    }
 }
 
