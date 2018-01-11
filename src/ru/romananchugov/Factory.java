@@ -19,14 +19,16 @@ public class Factory {
     //super class for all pizzas
     public abstract class Pizza{
         String name;
-        String dough;
-        String sauce;
-        ArrayList toppings = new ArrayList();
+        Dough dough;
+        Sauce sauce;
+        Veggies veggies[];
+        Cheese cheese;
+        Pepperoni pepperoni;
+        Clams clam;
 
 
-        public void prepare(){
-            System.out.println("Prepare with toppings " + toppings.size());
-        }
+
+        public abstract void prepare();
 
         public void bake(){
             System.out.println("Bake for 25 minutes at 350");
@@ -42,6 +44,10 @@ public class Factory {
 
         public String getName(){
             return  name;
+        }
+
+        void setName(String name){
+            this.name = name;
         }
     }
 
@@ -112,9 +118,11 @@ public class Factory {
         @Override
         Pizza createPizza(String type) {
             Pizza pizza = null;
+            PizzaIngredientFractory pizzaIngredientFractory = new NYPizzaIngredientFactory();
 
             if(type.equals("cheese")){
-                pizza = new NYStyleCheesePizza();
+                pizza = new CheesePizza(pizzaIngredientFractory);
+                pizza.setName("new york style cheese pizza");
             }
 
             return pizza;
@@ -177,6 +185,41 @@ public class Factory {
         @Override
         public Clams createClam() {
             return new FreshClams();
+        }
+    }
+
+    public class CheesePizza extends Pizza{
+
+        PizzaIngredientFractory ingredientFractory;
+
+        public CheesePizza(PizzaIngredientFractory pizzaIngredientFractory){
+            this.ingredientFractory = pizzaIngredientFractory;
+        }
+
+        @Override
+        public void prepare() {
+            System.out.println("Preparing" + name);
+            dough = ingredientFractory.createDough();
+            sauce = ingredientFractory.createSauce();
+            cheese = ingredientFractory.createCheese();
+        }
+    }
+
+    public class ClamPizza extends Pizza{
+
+        PizzaIngredientFractory pizzaIngredientFractory;
+
+        public ClamPizza(PizzaIngredientFractory pizzaIngredientFractory){
+            this.pizzaIngredientFractory = pizzaIngredientFractory;
+        }
+
+        @Override
+        public void prepare() {
+            System.out.println("Preparing " + name);
+            dough = pizzaIngredientFractory.createDough();
+            sauce = pizzaIngredientFractory.createSauce();
+            cheese = pizzaIngredientFractory.createCheese();
+            clam = pizzaIngredientFractory.createClam();
         }
     }
 
