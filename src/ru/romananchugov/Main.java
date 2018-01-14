@@ -6,7 +6,8 @@ public class Main {
         System.out.println("-----------DECORATOR-----------");
         Decorator.programm();
         System.out.println("-----------FACTORY-----------");
-        Factory.program();
+        //Factory.program(); - errors, just example
+        System.out.println("-----------SINGLETON(NO PROGRAM)-----------");
 
     }
 

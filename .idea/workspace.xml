@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b13cb0fd-943f-43a0-a468-69445b6069af" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/ru/romananchugov/Factory.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/ru/romananchugov/Singleton.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Beverage.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Beverage.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$CondimentDecorator.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$CondimentDecorator.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$DarkRoast.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$DarkRoast.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Decaf.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Decaf.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Espresso.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Espresso.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$HouseBlend.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$HouseBlend.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Mocha.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Mocha.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Soy.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Soy.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Whip.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator$Whip.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Decorator.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Main.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer$CurrentConditionsDisplay.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer$CurrentConditionsDisplay.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer$DisplayElement.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer$DisplayElement.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer$Subject.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer$Subject.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer$WeatherData.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer$WeatherData.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer.class" afterPath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Observer.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Factory$ChicagoPizzaStore.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Factory$ChicagoStyleCheesePizza.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Factory$NYPizzaStore.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Factory$NYStyleCheesePizza.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Factory$Pizza.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Factory$PizzaStore.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Factory.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Patterns/ru/romananchugov/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/ru/romananchugov/Factory.java" afterPath="$PROJECT_DIR$/src/ru/romananchugov/Factory.java" />
       <change beforePath="$PROJECT_DIR$/src/ru/romananchugov/Main.java" afterPath="$PROJECT_DIR$/src/ru/romananchugov/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,32 +28,29 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Factory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Singleton.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Singleton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Factory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Factory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              <folding>
-                <element signature="e#725#726#0" expanded="true" />
-                <element signature="e#811#812#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
-                <element signature="e#940#941#0" expanded="true" />
-                <element signature="e#999#1000#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1134#1135#0" expanded="true" />
-                <element signature="e#1170#1171#0" expanded="true" />
-                <element signature="e#1832#1833#0" expanded="true" />
-                <element signature="e#1903#1904#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,6 +63,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Pizza</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,8 +83,10 @@
         <option value="$PROJECT_DIR$/src/ru/romananchugov/Observer.java" />
         <option value="$PROJECT_DIR$/src/ru/romananchugov/Ducks.java" />
         <option value="$PROJECT_DIR$/src/ru/romananchugov/Decorator.java" />
-        <option value="$PROJECT_DIR$/src/ru/romananchugov/Main.java" />
         <option value="$PROJECT_DIR$/src/ru/romananchugov/Factory.java" />
+        <option value="$PROJECT_DIR$/src/ru/romananchugov/Main.java" />
+        <option value="$PROJECT_DIR$/src/ru/romananchugov/SingletonProgram.java" />
+        <option value="$PROJECT_DIR$/src/ru/romananchugov/Singleton.java" />
       </list>
     </option>
   </component>
@@ -116,6 +111,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,7 +136,6 @@
       </pane>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -231,13 +226,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282353" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" x="8" y="560" width="1280" height="293" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" x="8" y="560" width="1280" height="293" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -250,6 +244,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -303,11 +298,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Decorator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -352,7 +362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -360,7 +369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -368,36 +376,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Factory.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/romananchugov/Singleton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1170#1171#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#1903#1904#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
