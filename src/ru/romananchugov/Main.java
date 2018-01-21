@@ -13,6 +13,8 @@ public class Main {
         System.out.println("-----------ADAPTER-----------");
         AdapterPattern.program();
         System.out.println("-----------FACADE-----------(no program)");
+        System.out.println("-----------TEMPLATE METHOD-----------");
+        TemplateMethodPattern.program();
 
     }
 
