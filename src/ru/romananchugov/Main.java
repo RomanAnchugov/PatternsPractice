@@ -10,6 +10,9 @@ public class Main {
         System.out.println("-----------SINGLETON(NO PROGRAM)-----------");
         System.out.println("-----------COMMAND-----------");
         CommandPattern.program();
+        System.out.println("-----------ADAPTER-----------");
+        AdapterPattern.program();
+        System.out.println("-----------FACADE-----------(no program)");
 
     }
 
