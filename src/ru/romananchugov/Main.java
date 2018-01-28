@@ -15,6 +15,10 @@ public class Main {
         System.out.println("-----------FACADE-----------(no program)");
         System.out.println("-----------TEMPLATE METHOD-----------");
         TemplateMethodPattern.program();
+        System.out.println("-----------ITERATOR-----------");
+        IteratorPattern.program();
+        System.out.println("-----------LINKER-----------");
+        LinkerPattern.program();
 
     }
 
