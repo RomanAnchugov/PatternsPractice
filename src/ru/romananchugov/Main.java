@@ -19,6 +19,8 @@ public class Main {
         IteratorPattern.program();
         System.out.println("-----------LINKER-----------");
         LinkerPattern.program();
+        System.out.println("-----------STATE-----------");
+        StatePattern.program();
 
     }
 
