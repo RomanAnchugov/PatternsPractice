@@ -21,6 +21,8 @@ public class Main {
         LinkerPattern.program();
         System.out.println("-----------STATE-----------");
         StatePattern.program();
+        System.out.println("-----------PROXY-----------");
+        ProxyPattern.program();
 
     }
 
