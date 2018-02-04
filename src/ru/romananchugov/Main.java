@@ -22,7 +22,9 @@ public class Main {
         System.out.println("-----------STATE-----------");
         StatePattern.program();
         System.out.println("-----------PROXY-----------");
-        ProxyPattern.program();
+       // ProxyPattern.program(); --- errors
+        System.out.println("-----------COMPOSITE-----------");
+        CompositePattern.program();
 
     }
 
