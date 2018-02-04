@@ -44,11 +44,10 @@ public class CompositePattern {
 
         System.out.println("\nDuck simulator");
 
-        simulate(mallardDuck);
-        simulate(redheadDuck);
-        simulate(duckCall);
-        simulate(rubberDuck);
-        simulate(gooseDuck);
+        System.out.println("Ducks simulator: with observer");
+        Quackologist quackologist = new Quackologist();
+
+        flockOfDucks.registerObserver(quackologist);
 
         System.out.println("Duck simulator: Whole flock simulator");
         simulate(flockOfDucks);
@@ -63,15 +62,32 @@ public class CompositePattern {
     }
 
     //STRATEGY
-    public interface Quackable{
+    public interface Quackable extends QuackObservable{
         public void quack();
     }
 
     public class MallardDuck implements Quackable{
 
+        Observable observable;
+
+        public MallardDuck(){
+            observable = new Observable(this);
+        }
+
         @Override
         public void quack() {
             System.out.println("Quack!");
+            notifyObservers();
+        }
+
+        @Override
+        public void registerObserver(Observer observer) {
+            observable.registerObserver(observer);
+        }
+
+        @Override
+        public void notifyObservers() {
+            observable.notifyObservers();
         }
     }
     public class RedheadDuck implements Quackable{
@@ -80,12 +96,33 @@ public class CompositePattern {
         public void quack() {
             System.out.println("Quack!");
         }
+
+        @Override
+        public void registerObserver(Observer observer) {
+
+        }
+
+        @Override
+        public void notifyObservers() {
+
+        }
     }
     public class DuckCall implements Quackable{
 
         @Override
         public void quack() {
             System.out.println("Kwak");
+            notifyObservers();
+        }
+
+        @Override
+        public void registerObserver(Observer observer) {
+
+        }
+
+        @Override
+        public void notifyObservers() {
+
         }
     }
     public class RubberDuck implements Quackable{
@@ -93,6 +130,17 @@ public class CompositePattern {
         @Override
         public void quack() {
             System.out.println("Squeak");
+            notifyObservers();
+        }
+
+        @Override
+        public void registerObserver(Observer observer) {
+
+        }
+
+        @Override
+        public void notifyObservers() {
+
         }
     }
 
@@ -113,11 +161,23 @@ public class CompositePattern {
         @Override
         public void quack() {
            goose.honk();
+           notifyObservers();
+        }
+
+        @Override
+        public void registerObserver(Observer observer) {
+
+        }
+
+        @Override
+        public void notifyObservers() {
+
         }
     }
 
     private class QuackCounter implements Quackable{
         Quackable duck;
+
 
         public QuackCounter(Quackable duck){
             this.duck = duck;
@@ -126,11 +186,22 @@ public class CompositePattern {
         @Override
         public void quack() {
             duck.quack();
+            notifyObservers();
             numberOfQuacks++;
         }
 
         public int getQuacks(){
             return numberOfQuacks;
+        }
+
+        @Override
+        public void registerObserver(Observer observer) {
+            duck.registerObserver(observer);
+        }
+
+        @Override
+        public void notifyObservers() {
+            //duck.notifyObservers();
         }
     }
 
@@ -192,6 +263,7 @@ public class CompositePattern {
     public class Flock implements Quackable{
         ArrayList quackers = new ArrayList();
 
+
         public void add(Quackable quacker){
             quackers.add(quacker);
         }
@@ -202,6 +274,58 @@ public class CompositePattern {
                 Quackable quacker = (Quackable) iterator.next();
                 quacker.quack();
             }
+        }
+
+        @Override
+        public void registerObserver(Observer observer) {
+            Iterator iterator = quackers.iterator();
+            while(iterator.hasNext()){
+                Quackable quackable = (Quackable) iterator.next();
+                quackable.registerObserver(observer);
+            }
+        }
+
+        @Override
+        public void notifyObservers() {
+        }
+    }
+
+    //OBSERVER
+    public interface QuackObservable{
+        public void registerObserver(Observer observer);
+        public void notifyObservers();
+    }
+
+    public class Observable implements QuackObservable{
+        ArrayList observers = new ArrayList();
+        QuackObservable duck;
+
+        public Observable(QuackObservable duck){
+            this.duck = duck;
+        }
+
+        @Override
+        public void registerObserver(Observer observer) {
+            observers.add(observer);
+        }
+
+        @Override
+        public void notifyObservers() {
+            Iterator iterator = observers.iterator();
+            while(iterator.hasNext()){
+                Observer observer = (Observer) iterator.next();
+                observer.update(duck);
+            }
+        }
+    }
+    public interface Observer{
+        public void update(QuackObservable duck);
+    }
+    public class Quackologist implements Observer{
+
+        @Override
+        public void update(QuackObservable duck) {
+            System.out.println("Quackologist: " + duck + "just quacked");
         }
     }
 }
