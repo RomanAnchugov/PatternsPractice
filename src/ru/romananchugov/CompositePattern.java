@@ -1,5 +1,8 @@
 package ru.romananchugov;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class CompositePattern {
     static int numberOfQuacks = 0;
 
@@ -18,6 +21,27 @@ public class CompositePattern {
         Quackable rubberDuck = duckFactory.createRubberDuck();
         Quackable gooseDuck =  new GooseAdapter(new Goose());
 
+        Flock flockOfDucks = new Flock();
+
+        flockOfDucks.add(redheadDuck);
+        flockOfDucks.add(duckCall);
+        flockOfDucks.add(redheadDuck);
+        flockOfDucks.add(gooseDuck);
+
+        Flock flockOfMallards = new Flock();
+
+        Quackable mallardOne = duckFactory.createMallardDuck();
+        Quackable mallardTwo = duckFactory.createMallardDuck();
+        Quackable mallardThree = duckFactory.createMallardDuck();
+        Quackable mallardFour = duckFactory.createMallardDuck();
+
+        flockOfMallards.add(mallardOne);
+        flockOfMallards.add(mallardTwo);
+        flockOfMallards.add(mallardThree);
+        flockOfMallards.add(mallardFour);
+
+        flockOfDucks.add(flockOfMallards);
+
         System.out.println("\nDuck simulator");
 
         simulate(mallardDuck);
@@ -25,6 +49,12 @@ public class CompositePattern {
         simulate(duckCall);
         simulate(rubberDuck);
         simulate(gooseDuck);
+
+        System.out.println("Duck simulator: Whole flock simulator");
+        simulate(flockOfDucks);
+
+        System.out.println("Duck simulator: Mallard flock simulator");
+        simulate(flockOfMallards);
 
         System.out.println("The ducks quacked " + numberOfQuacks + " times");
     }
@@ -158,5 +188,20 @@ public class CompositePattern {
         }
     }
 
+    //LINKER
+    public class Flock implements Quackable{
+        ArrayList quackers = new ArrayList();
 
+        public void add(Quackable quacker){
+            quackers.add(quacker);
+        }
+
+        public void quack(){
+            Iterator iterator = quackers.iterator();
+            while(iterator.hasNext()){
+                Quackable quacker = (Quackable) iterator.next();
+                quacker.quack();
+            }
+        }
+    }
 }
